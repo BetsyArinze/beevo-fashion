@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import {SidebarContext} from '../contexts/SidebarContext';
+import {BsBag} from 'react-icons/bs';
+import { useContext } from "react";
 
-function App() {
-    const [isOpen, setIsOpen] = useState(false);
+const Header = () => {
+    // const [isOpen, setIsOpen] = useState(false);
+    const {isOpen, setIsOpen} = useContext(SidebarContext);
 
     return (
         <nav className="navbar flex items-center justify-between flex-wrap">
@@ -31,27 +35,26 @@ function App() {
             </div>
             <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
                 <div className="text-sm lg:flex-grow">
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
+                    <a href="../pages/Home.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
                         HOME
                     </a>
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
+                    <a href="../pages/Shop.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
                         SHOP
                     </a>
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-                        FEATURES
-                    </a>
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
+                    <a href="../pages/Contact.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
                         CONTACT
                     </a>
                 </div>
-                <div>
-                    <button className="inline-flex poppins-text navbar-button items-center border-0 py-2 px-4 text-white">
-                        LOGIN
-                    </button>
-                </div>
+                <div
+                    onClick={() => setIsOpen(!isOpen)}
+                    className='cursor-pointer flex relative'
+                    >
+                        <BsBag className="text-2xl" />
+                    </div>
             </div>
         </nav>
     );
 }
 
-export default App;
+export default Header;
+

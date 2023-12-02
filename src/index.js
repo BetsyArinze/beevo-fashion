@@ -4,19 +4,22 @@ import './assets/css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// product provider
+// providers
 import ProductProvider  from './contexts/ProductContext';
 import CartProvider from './contexts/CartContext';
+import SidebarProvider from './contexts/SidebarContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CartProvider>
-    <ProductProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </ProductProvider>
-  </CartProvider>
+  <SidebarProvider>
+    <CartProvider>
+      <ProductProvider>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </ProductProvider>
+    </CartProvider>
+  </SidebarProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
