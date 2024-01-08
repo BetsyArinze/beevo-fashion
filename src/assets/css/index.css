@@ -47,9 +47,9 @@ h3 {
   font-size: 1rem;
 }
 
-.navbar {
+.header {
   background: #C2EFD4;
-  padding: 55px 175px 0px 174px;
+  padding: 15px 90px 15px 90px;
   font-family: Poppins;
   font-size: 20px;
   font-style: bold;

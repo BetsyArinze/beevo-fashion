@@ -40,12 +40,12 @@ const Product = ({product}) => {
                             <BsPlus className='text-3xl' />
                         </div>
                     </button>
-                    {/* <Link 
+                    <Link 
                         to={`/product/${id}`} 
                         className='w-12 h-12 bg-white flex justify-center
                         items-center text-primary drop-shadow-x1'>
                             <BsEyeFill />
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
             {/* category and title and price */}

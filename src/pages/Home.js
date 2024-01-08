@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
+import {Link} from 'react-router-dom';
 // import product context
 import { ProductContext } from '../contexts/ProductContext';
 // import icons
 import { FaArrowRight } from 'react-icons/fa';
 // import components
 import Product from '../components/Product';
+
 
 const Home = () => {
     // get product from product context
@@ -44,11 +46,12 @@ const Home = () => {
                     </div>
                     <div className='flex mx-auto justify-center'>
                         <button className="border-2 border-[#224F34] items-center p-3 text-red">
-                            <div className='flex items-center text-[#224F34]'>
+                            <Link to="../pages/Shop.js"
+                             className='flex items-center text-[#224F34]'>
                                 See all
                                 <FaArrowRight className="ml-3" />
 
-                            </div>
+                            </Link>
                         </button>
                     </div>
                 </div>
