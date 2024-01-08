@@ -6,6 +6,7 @@ import { ProductContext } from '../contexts/ProductContext';
 import { FaArrowRight } from 'react-icons/fa';
 // import components
 import Product from '../components/Product';
+import Hero from '../components/Hero'
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
 
     return (
     <div>
+        <Hero />
         <section className='py-16'>
             <div className='container mx-auto'>
                 <div className='mb-16'>
