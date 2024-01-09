@@ -49,13 +49,14 @@ const Product = ({product}) => {
                 </div>
             </div>
             {/* category and title and price */}
-            <div className='p-2 items-center w-full'>
+            <div className='p-2 items-center w-full p-0'>
                 <h3 className='mb-1 font-poppins font-semibold'>{title}</h3>
-                <div className='flex mx-auto p-2 justify-between w-2/4 items-center font-medium'>
+                <div className='flex mx-auto p-1 justify-center w-full items-center font-medium'>
                     <div className='text-center'>$ {price} </div>
-                    <div className='text-center'> | </div>
-                    <div className='flex items-center justify-center'>
-                        {rating.rate} <FaStar className="text-yellow-500 ml-1" />
+                    <div className='text-center px-2'> | </div>
+                    <div className='text-center'> {rating.rate} </div>
+                    <div className='flex w-6 h-10 items-center justify-center'>
+                        <FaStar className="text-yellow-500" />
                     </div>
                 </div>
             </div>

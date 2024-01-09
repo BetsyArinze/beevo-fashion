@@ -30,15 +30,15 @@ const Header = () => {
 
                     {/* Pages */}
                     <div className={`w-full block lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
-                        <div className="font-medium text-2xl lg:flex-grow">
-                            <a href="../pages/Home.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5">
-                                HOME
+                        <div className="text-2xl lg:flex-grow">
+                            <a href="../pages/Home.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase">
+                                Home
                             </a>
-                            <a href="../pages/Shop.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5">
-                                SHOP
+                            <a href="../pages/Shop.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase">
+                                Shop
                             </a>
-                            <a href="../pages/Contact.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5">
-                                CONTACT
+                            <a href="../pages/Contact.js" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase">
+                                Contact
                             </a>
                         </div>
                     
