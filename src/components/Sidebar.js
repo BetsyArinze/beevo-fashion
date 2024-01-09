@@ -8,7 +8,7 @@ import {FiTrash2}  from "react-icons/fi"
 
 const Sidebar = () => {
     const {isOpen, handleClose } = useContext(SidebarContext);
-    const {cart, clearCart, total} = useContext(CartContext);
+    const {cart, clearCart, total, itemAmount} = useContext(CartContext);
     return (
         <div 
         className={`${
@@ -20,7 +20,9 @@ const Sidebar = () => {
         <div className='flex items-center justify-between py-6
          border-b'>
           <div className='uppercase text-sm 
-          font-semibold'>Shopping Bag</div>
+          font-semibold'>
+            Shopping Bag ({itemAmount})
+          </div>
           {/* icon */}
           <div onClick={handleClose} 
           className='cursor-pointer w-8 h-8 flex
