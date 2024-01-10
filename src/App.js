@@ -4,10 +4,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 // import pages
-import Home from './pages/Home';
-import Shop from './pages/Shop';
+import Home from './pages/home';
+import Shop from './pages/shop';
 import ProductDetails from './pages/ProductDetails';
-import Contact from './pages/Contact';
+import Contact from './pages/contact';
+
 // import components
 import Header from './components/Header';
 import Footer from './components/Footer';
