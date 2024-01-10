@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
     <div>
-        <section className='py-16'>
+        <section className='py-16 mt-8'>
             <div className='container mx-auto'>
                 <div className='text-center mb-9'>
                     <div className='grid grid-cols-1 md:grid-cols-2

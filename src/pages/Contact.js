@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
     <div>
-        <section className='py-16'>
+        <section className='py-16 mt-8'>
             <div className='container mx-auto'>
                 <div className='text-left mb-9'>
                       <h2>Contact for complaints or feedback</h2> 
