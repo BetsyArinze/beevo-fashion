@@ -4,6 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 // import components
 import Product from '../components/Product';
 
+
 const Home = () => {
 
     return (
