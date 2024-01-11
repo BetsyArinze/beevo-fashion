@@ -1,0 +1,2 @@
+[build]
+  command = "CI='' npm run build && ls -R /opt/build/repo"
