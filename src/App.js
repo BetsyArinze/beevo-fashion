@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 // import pages
 import Home from './pages/home';
 import Shop from './pages/shop';
-import ProductDetails from './pages/ProductDetails';
+import Product from './pages/product';
 import Contact from './pages/contact';
 
 // import components
@@ -19,15 +19,18 @@ const App = () => {
     <div className='overflow-hidden'>
       <Router>
        <Header/>
-       <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/pages/home.js' element={<Home />} />
-          <Route path='/pages/shop.js' element={<Shop />} />
-          <Route path='/product/:id' element={<ProductDetails />} />
-          <Route path='/pages/contact.js' element={<Contact />} />
-
-       </Routes>
-       <Sidebar/>
+       <div className='flex'>
+          <div className='page-content'>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/pages/home.js' element={<Home />} />
+                <Route path='/pages/shop.js' element={<Shop />} />
+                <Route path='/product/:id' element={<Product />} />
+                <Route path='/pages/contact.js' element={<Contact />} />
+            </Routes>
+          </div>
+        <Sidebar/>
+        </div>
        <Footer />
       </Router>
     </div>

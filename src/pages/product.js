@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import {CartContext} from "../contexts/CartContext";
 import {ProductContext} from "../contexts/ProductContext";
 
-const ProductDetails = () => {
+const Product = () => {
         // get product id from the url
         const { id } = useParams();
         const { products } = useContext(ProductContext);
@@ -53,4 +53,4 @@ const ProductDetails = () => {
         )
 };
 
-export default ProductDetails;
+export default Product;
