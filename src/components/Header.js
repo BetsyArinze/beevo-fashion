@@ -36,26 +36,26 @@ const Header = () => {
                         </Link>
                         {/* Pages list for small screens */}
                         <div className={`lg:hidden text-xl ${isNavOpen ? "block" : "hidden"}`}>
-                            <a href="../pages/home" className="block mt-4 mx-auto uppercase hover:text-gray-500">Home</a>
-                            <a href="../pages/shop" className="block mt-4 mx-auto uppercase hover:text-gray-500">Shop</a>
-                            <a href="../pages/contact" className="block mt-4 mx-auto uppercase hover:text-gray-500">Contact</a>
+                            <a href="../pages/home.js" className="block mt-4 mx-auto uppercase hover:text-gray-500">Home</a>
+                            <a href="../pages/shop.js" className="block mt-4 mx-auto uppercase hover:text-gray-500">Shop</a>
+                            <a href="../pages/contact.js" className="block mt-4 mx-auto uppercase hover:text-gray-500">Contact</a>
                         </div>
                     </div>
 
                     {/* Pages */}
                     <div className={`w-full hidden block lg:flex lg:items-center lg:w-auto w-[20px] ${isNavOpen ? "block" : "hidden"}`}>
                         <div className="text-2xl lg:flex-grow">
-                            <a href="../pages/home" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
+                            <a href="../pages/home.js" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
                                 ${activePage === 'home' ? 'underline' : ''}`}
                                 onClick={() => setActivePage('home')}>
                                 Home
                             </a>
-                            <a href="../pages/shop" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase 
+                            <a href="../pages/shop.js" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase 
                                 ${activePage === 'shop' ? 'underline' : ''}`}
                                 onClick={() => setActivePage('shop')}>
                                 Shop
                             </a>
-                            <a href="../pages/contact" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
+                            <a href="../pages/contact.js" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
                                 ${activePage === 'contact' ? 'underline' : ''}`}
                                 onClick={() => setActivePage('contact')}>
                                 Contact

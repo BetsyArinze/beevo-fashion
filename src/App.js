@@ -21,10 +21,10 @@ const App = () => {
        <Header/>
        <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/pages/home' element={<Home />} />
-          <Route path='/pages/shop' element={<Shop />} />
+          <Route path='/pages/home.js' element={<Home />} />
+          <Route path='/pages/shop.js' element={<Shop />} />
           <Route path='/product/:id' element={<ProductDetails />} />
-          <Route path='/pages/contact' element={<Contact />} />
+          <Route path='/pages/contact.js' element={<Contact />} />
 
        </Routes>
        <Sidebar/>
