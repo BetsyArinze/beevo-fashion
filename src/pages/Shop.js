@@ -6,7 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 // import components
 import Product from '../components/Product';
 
-const Home = () => {
+const Shop = () => {
     // get product from product context
     const { products} = useContext(ProductContext);
 
@@ -29,4 +29,4 @@ const Home = () => {
     </div>
 )};
 
-export default Home;
+export default Shop;

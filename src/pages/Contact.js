@@ -5,7 +5,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Product from '../components/Product';
 
 
-const Home = () => {
+const Contact = () => {
 
     return (
     <div>
@@ -22,4 +22,4 @@ const Home = () => {
     </div>
 )};
 
-export default Home;
+export default Contact;
