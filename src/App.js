@@ -19,19 +19,17 @@ const App = () => {
     <div className='overflow-hidden'>
       <Router>
        <Header/>
-       <div className='flex'>
-          <div className='page-content'>
-            <Routes>
+            <div className='page-content'>
+              <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/pages/home.js' element={<Home />} />
-                <Route path='/pages/shop.js' element={<Shop />} />
+                <Route path='/pages/home' element={<Home />} />
+                <Route path='/pages/shop' element={<Shop />} />
                 <Route path='/product/:id' element={<Product />} />
-                <Route path='/pages/contact.js' element={<Contact />} />
-            </Routes>
-          </div>
-        <Sidebar/>
-        </div>
-       <Footer />
+                <Route path='/pages/contact' element={<Contact />} />
+              </Routes>
+            </div>
+          <Sidebar/>
+        <Footer />
       </Router>
     </div>
   );

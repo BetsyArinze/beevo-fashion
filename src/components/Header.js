@@ -35,27 +35,38 @@ const Header = () => {
                             </div>
                         </Link>
                         {/* Pages list for small screens */}
-                        <div className={`lg:hidden text-xl ${isNavOpen ? "block" : "hidden"}`}>
-                            <Link to="../pages/home.js" className="block mt-4 mx-auto uppercase hover:text-gray-500">Home</Link>
-                            <Link to="../pages/shop.js" className="block mt-4 mx-auto uppercase hover:text-gray-500">Shop</Link>
-                            <Link to="../pages/contact.js" className="block mt-4 mx-auto uppercase hover:text-gray-500">Contact</Link>
+                        <div className={`lg:hidden block text-xl 
+                        ${isNavOpen ? "block" : "hidden"}  
+                        ${activePage === 'home' ? '' : 'bg-white'}`}>
+                            <Link to="../pages/home" className="block mt-4 mx-auto uppercase hover:text-gray-500"
+                            onClick={() => setActivePage('home')}>
+                                Home
+                            </Link>
+                            <Link to="../pages/shop" className="block mt-4 mx-auto uppercase hover:text-gray-500"
+                            onClick={() => setActivePage('shop')}>
+                                Shop
+                            </Link>
+                            <Link to="../pages/contact" className="block mt-4 mx-auto uppercase hover:text-gray-500"
+                            onClick={() => setActivePage('contact')}>
+                                Contact
+                            </Link>
                         </div>
                     </div>
 
                     {/* Pages */}
                     <div className={`w-full hidden block lg:flex lg:items-center lg:w-auto w-[20px] ${isNavOpen ? "block" : "hidden"}`}>
                         <div className="text-2xl lg:flex-grow">
-                            <Link to="../pages/home.js" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
+                            <Link to="../pages/home" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
                                 ${activePage === 'home' ? 'underline' : ''}`}
                                 onClick={() => setActivePage('home')}>
                                 Home
                             </Link>
-                            <Link to="../pages/shop.js" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase 
+                            <Link to="../pages/shop" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase 
                                 ${activePage === 'shop' ? 'underline' : ''}`}
                                 onClick={() => setActivePage('shop')}>
                                 Shop
                             </Link>
-                            <Link to="../pages/contact.js" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
+                            <Link to="../pages/contact" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
                                 ${activePage === 'contact' ? 'underline' : ''}`}
                                 onClick={() => setActivePage('contact')}>
                                 Contact

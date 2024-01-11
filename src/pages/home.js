@@ -48,7 +48,7 @@ const Home = () => {
                     </div>
                     <div className='flex mx-auto justify-center'>
                         <button className="border-2 border-[#224F34] items-center p-3 text-red">
-                            <Link to="../pages/shop.js"
+                            <Link to="../pages/shop"
                              className='flex items-center text-[#224F34]'>
                                 See all
                                 <FaArrowRight className="ml-3" />
