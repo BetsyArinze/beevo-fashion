@@ -47,11 +47,10 @@ h3 {
   font-size: 1rem;
 }
 
-.header {
-  background: #C2EFD4;
-  padding: 15px 90px 15px 90px;
+header {
   font-family: Poppins;
-  font-size: 20px;
+  color: #224F34;
+  font-size: 22px;
   font-style: bold;
   font-weight: 500;
 }

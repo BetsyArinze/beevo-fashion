@@ -11,35 +11,53 @@ const Header = () => {
     const {isOpen, setIsOpen} = useContext(SidebarContext);
     const {itemAmount} =  useContext(CartContext);
     const [isNavOpen, setIsNavOpen] = useState(false);
+    const [activePage, setActivePage] = useState(() => {
+        return localStorage.getItem('activePage') || 'home';
+    });
 
     // event listener
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
+            window.scrollY > 10 ? setIsActive(true) : setIsActive(false);
         });
-    });
+        localStorage.setItem('activePage', activePage);
+    }, [activePage]);
     return (
         <header className={`flex justify-between w-full ${isActive ? 'bg-white py-4' : 'bg-none py-6'} fixed w-full z-10 
             transition-all`}>
-                <div className="container mx-auto flex items-center justify-between h-full">
+                <div className="container mx-auto flex lg:items-center justify-between h-full">
                     {/* Logo */}
-                    <Link to={'/'}>
-                        <div className="flex items-center">
-                            <h1 className="text-2xl font-bold">Beevo </h1>
-                            <img className="w-[40px]" src={Logo} alt="" />
+                    <div className="lg:flex">
+                        <Link to={'/'}>
+                            <div className="flex items-center">
+                                <h1 className="text-2xl font-bold">Beevo </h1>
+                                <img className="w-[40px]" src={Logo} alt="" />
+                            </div>
+                        </Link>
+                        {/* Pages list for small screens */}
+                        <div className={`lg:hidden text-xl ${isNavOpen ? "block" : "hidden"}`}>
+                            <a href="../pages/home" className="block mt-4 mx-auto uppercase hover:text-gray-500">Home</a>
+                            <a href="../pages/shop" className="block mt-4 mx-auto uppercase hover:text-gray-500">Shop</a>
+                            <a href="../pages/contact" className="block mt-4 mx-auto uppercase hover:text-gray-500">Contact</a>
                         </div>
-                    </Link>
+                    </div>
 
                     {/* Pages */}
-                    <div className={`w-full block lg:flex lg:items-center lg:w-auto w-[20px] ${isNavOpen ? "block" : "hidden"}`}>
+                    <div className={`w-full hidden block lg:flex lg:items-center lg:w-auto w-[20px] ${isNavOpen ? "block" : "hidden"}`}>
                         <div className="text-2xl lg:flex-grow">
-                            <a href="../pages/home" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase">
+                            <a href="../pages/home" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
+                                ${activePage === 'home' ? 'underline' : ''}`}
+                                onClick={() => setActivePage('home')}>
                                 Home
                             </a>
-                            <a href="../pages/shop" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase">
+                            <a href="../pages/shop" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase 
+                                ${activePage === 'shop' ? 'underline' : ''}`}
+                                onClick={() => setActivePage('shop')}>
                                 Shop
                             </a>
-                            <a href="../pages/contact" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase">
+                            <a href="../pages/contact" className={`block mt-4 lg:inline-block lg:mt-0 text-white-200 mx-5 uppercase
+                                ${activePage === 'contact' ? 'underline' : ''}`}
+                                onClick={() => setActivePage('contact')}>
                                 Contact
                             </a>
                         </div>
@@ -50,7 +68,7 @@ const Header = () => {
                         {/* Cart */}
                         <div
                             onClick={() => setIsOpen(!isOpen)}
-                            className='cursor-pointer flex relative'
+                            className='cursor-pointer flex relative h-[30px]'
                             >
                                 <BsBag className="text-2xl" />
                                 <div className="bg-red-500 absolute -right-2 -bottom-1 text-[12px] w-[18px]
